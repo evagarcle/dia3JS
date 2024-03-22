@@ -106,16 +106,33 @@ function ultimoCaracter (word) {
 
 
 
-
+ 
+ let derechaIzquierda = ''
 
  function esPalindromo (cadenaDeTexto) {
-  if (typeof cadenaDeTexto != 'string' || cadenaDeTexto.length == 0) {
-    return 'No es un formato correcto'
-  } else if (cadenaDeTexto === cadenaDeTexto.reverse){
-    return 'Es un palindromo'
+
+  cadenaDeTexto = cadenaDeTexto.replace(/[.' ',\/#!$%\^&\*;:{}=\-_`~()]/g,"").toLowerCase()
+
+  console.log(cadenaDeTexto)
+
+  for (let i = cadenaDeTexto.length - 1; i >= 0 ; i--) {
+    derechaIzquierda += cadenaDeTexto[i]
+    
   }
-}
-console.log(esPalindromo('Eva'))
+
+  if (cadenaDeTexto == derechaIzquierda) {
+    return 'Sí es palíndromo'
+  } 
+  return 'No es palíndromo'
+ }
+
+ console.log(esPalindromo('Anita, la gorda lagartona, no traga la droga latina.'))
+
+
+
+
+
+
 
 
 
@@ -151,15 +168,17 @@ console.log(division(10, 5))
 
 
 
-let newArray = []
-function superiorQueCinco (arr) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] >= 5 ) {
-      return newArray.push()
+let arrayMayoresQueCinco = []
+
+function obtenerMayoresQueCinco (arrayRandom) {
+  for (let i=0; i < arrayRandom.length; i++) {
+    if (arrayRandom[i] >= 5){
+      arrayMayoresQueCinco.push(arrayRandom[i])
     }
   }
+  return arrayMayoresQueCinco
 }
-console.log(superiorQueCinco([1, 40, 3, 80, 5]))
+console.log(obtenerMayoresQueCinco([30, 20, 10, 2, 4]))
 
 
 
@@ -171,13 +190,28 @@ console.log(superiorQueCinco([1, 40, 3, 80, 5]))
 
 
 
-function numeroPrimo (numeroPrompt) {
-  let numero = prompt('Escribe un número')
-  if (numero % numero == 0 && numero % 1 == 0) {
+function numeroPrimo () {
+
+  // let numero = +prompt('Escribe un número')
+  
+  if (isNaN(numero)) {
+    return 'Introduzca un número'
+  } 
+
+  if (numero == 2 || numero == 3 || numero == 5) {
     return true
-  } else {
+  } else if (numero == 1 || numero % 2 == 0 || numero % 3 == 0 || numero % 5 == 0) {
     return false
-  }
-}
+  } 
 
-console.log(numeroPrimo())
+  return true
+
+}
+// console.log(numeroPrimo())
+
+
+  
+
+
+
+
