@@ -108,9 +108,76 @@ function ultimoCaracter (word) {
 
 
 
-
-
-
-function esPalindromo () {
-  
+ function esPalindromo (cadenaDeTexto) {
+  if (typeof cadenaDeTexto != 'string' || cadenaDeTexto.length == 0) {
+    return 'No es un formato correcto'
+  } else if (cadenaDeTexto === cadenaDeTexto.reverse){
+    return 'Es un palindromo'
+  }
 }
+console.log(esPalindromo('Eva'))
+
+
+
+
+
+
+
+
+function getPrecioMostrar (textoAPrecio) {
+  if (typeof textoAPrecio != 'number') {
+    return 'No es un formato correcto'
+  } else {
+    return `${textoAPrecio.toFixed(2)} €`
+  }
+}
+console.log(getPrecioMostrar(9))
+
+
+
+
+
+
+
+function division (a, b) {
+  return a / b
+}
+console.log(division(10, 5))
+
+
+
+
+
+
+
+
+let newArray = []
+function superiorQueCinco (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] >= 5 ) {
+      return newArray.push()
+    }
+  }
+}
+console.log(superiorQueCinco([1, 40, 3, 80, 5]))
+
+
+
+
+
+
+
+
+
+
+
+function numeroPrimo (numeroPrompt) {
+  let numero = prompt('Escribe un número')
+  if (numero % numero == 0 && numero % 1 == 0) {
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log(numeroPrimo())
