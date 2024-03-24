@@ -210,6 +210,112 @@ function numeroPrimo () {
 // console.log(numeroPrimo())
 
 
+
+
+
+
+
+
+
+// EXTRAS
+
+let arrayDeNumeros = []
+
+function obtenerImpares (arrayIntroducido) {
+  for (let i = 0; i < arrayIntroducido.length; i++){
+    if (arrayIntroducido[i] % 2 != 0){
+      arrayDeNumeros.push(arrayIntroducido[i])
+    } 
+  }
+  return arrayDeNumeros
+}
+console.log(obtenerImpares([15, 20, 17, 32, 5, 14, 29]))
+
+
+
+
+
+
+
+
+let resultado = 0
+
+function sumarArray (arrayNumerico) {
+  for (let i=0 ; i < arrayNumerico.length; i++) {
+    resultado = resultado + arrayNumerico[i]
+  }
+  return resultado
+  
+}
+console.log(sumarArray([1, 2, 3, 4]))
+
+
+
+
+
+
+let resultadoMultiplicacion = 1
+
+function multiplicarArray (arrayInput) {
+  for (let i = 0; i < arrayInput.length; i++) {
+    resultadoMultiplicacion = resultadoMultiplicacion * arrayInput[i]
+  }
+  return resultadoMultiplicacion
+}
+console.log(multiplicarArray([2, 4, 3, 2]))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let password = 'CacatuA'
+
+function checkPassword () {
+  let userInput = prompt('Introduce la contraseña')
+  
+  if (userInput === password) {
+    alert('Enhorabuena') 
+  } else if (userInput != password) {
+    alert('te quedan dos intentos') 
+    userInput = prompt('Introduce la contraseña')
+    
+    
+      if (userInput === password) {
+        alert('Enhorabuena') 
+      } else if (userInput != password) {
+      alert('Te queda solo UN intento') 
+      userInput = prompt('Introduce la contraseña')
+
+
+        if (userInput == password) {
+          alert('Enhorabuena') 
+        } else if (userInput != password)
+        alert('Contraseña BLOQUEADA') 
+
+    } 
+  } 
+}
+checkPassword()
+
+
+
+
+
+
   
 
 
